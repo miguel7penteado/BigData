@@ -27,8 +27,8 @@ Por padrão, Hadoop é configurado para rodar em um único nó, como um processo
 
 ## Modo Pseudo-Distribuido
 
-Just like the Standalone mode, in Pseudo-Distributed Mode Hadoop is run on a single-node in a pseudo(false) distributed mode. The difference is that each Hadoop daemon runs in a separate Java process in Pseudo-Distributed Mode. Where as in Local mode each Hadoop daemon runs as a single Java process. Again the usage of this mode is very limited and it can be only used for experimentation.
+Neste modo Hadoop também roda em um único nó. A diferença é que cada Hadoop processo-chave roda em um processo java separado, ao invés de rodarem todos em um mesmo processo como no modo anterior. Novamente O uso deste modo é muito limitado e usualmente utilizado em experimentos.
 
 ## Modo Distribuido
 
-In fully-distributed mode, all daemons are executed in a separate nodes forming a multi node cluster. This setup offers true distributed computing capability and offers built-in reliability, scalability and fault tolerance. This is the standard mode of operation in DEV, QA, UAT, PREPROD and Production environments.
+No modo distribuido, cada processo-chave roda em nós distintos, criando ai sim, um cluster. Esta configuração possibilita a computação distribuida e permite confiabilidade, escalabilidade e tolerança a falhas. Este é o modo de operação padrão em ambientes DEV, QA, UAT, PREPROD e Produção.
