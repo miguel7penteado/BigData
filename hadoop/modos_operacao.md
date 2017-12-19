@@ -4,14 +4,14 @@ O Hadoop é por natureza um sistema distribuido, portanto, deve possuir um contr
 Um cluster hadoop é composto por processos-chave, sendo que cada um é designado para uma tarefa específica.
 Estes são os processos-servidores padrão de um cluster hadoop.
 
-*1. NameNode
-*2. DataNode
-*3. JobTracker 
-*4. TaskTracker
-*5. ResourceManager (MRv2)
-*6. ApplicationMaster (MRv2)
-*7. NodeManager (MRv2)
-*8. SecondaryNameNode
+*1 - NameNode
+*2 - DataNode
+*3 - JobTracker 
+*4 - TaskTracker
+*5 - ResourceManager (MRv2)
+*6 - ApplicationMaster (MRv2)
+*7 - NodeManager (MRv2)
+*8 - SecondaryNameNode
 
 ## Modos de operação do Hadoop
 
