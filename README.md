@@ -15,3 +15,11 @@ Tutorial sobre ferramentas BigData padrão (apache) - sem comercial
 * 4. MongoDB
 * 5. Kafka
 * 6. Accumulo
+
+# Ferramentas de suporte
+
+* - Pig
+* - Hive
+* - Sqoop
+* - Flume
+
