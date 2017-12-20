@@ -37,4 +37,31 @@ Set PubkeyAuthentication to Yes
 # carregue as novas configurações no servidor ssh
 sudo /etc/init.d/ssh reload
 ```
+### 2.2 Gerando uma chave Pública dentro do perfil SSH do usuário do HADOOP
+Agora devemos gerar um par de chaves pública e privada dentro do perfil SSH do usuário do `HADOOP`, ou seja, dentro do
+subdiretório **.ssh/** existente no diretório do usuário. Após isso, copiamos a chave pública para o arquivo de chaves autorizadas deste usuário. Ou seja, quem quiser logar como este usuário neste servidor, basta apresentar a chave pública dele.
+
+#### 2.2.1. Entrando no diretório do usuário `usuario_hadoop`
+Entre no servidor como usuário `usuario_hadoop`.
+```bash
+su usuario_hadoop
+```
+### 2.2.2 Gerando um par de chaves criptográficas "sem senha"
+Chaves criptograficas são como cartão de banco. a chave é o "cartão" e ela pede uma senha. Nós queremos esse "cartão" sem
+senha. Para gerar essa chave sem senha (na verdade senha em branco), utilize este comando:
+```bash
+ssh-keygen -t rsa -P ""
+```
+Será criado o arquivo **id_rsa.pub**, que é a `Chave Pública` em si (nosso "cartão de banco sem senha").
+
+### 2.2.3 Colocando a Chave Pública no arquivo de chaves autorizadas a logar
+O arquivo de chaves autorizadas, **authorized_keys**, do perfil de ssh do usuário `usuario_hadoop` também fica no subdiretório
+**.ssh/** do diretorio deste usuário. Considerando que você já está dentro do diretório **.ssh/**, então digite o comando:
+```bash
+cat id_rsa.pub >> authorized_keys
+```
+Este comando insere o conteúdo da chave ao final do conteúdo do arquivo **authorized_keys**.
+
+
+
 
