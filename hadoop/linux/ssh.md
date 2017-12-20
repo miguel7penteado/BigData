@@ -18,3 +18,23 @@ sudo apt-get install openssh-client -y
 #instale o servidor de ftp seguro (sftp)
 sudo apt-get install openssh-sftp-server -y
 ```
+## 2. Habilitando a autenticação "sem senha" no servidor OpenSSH
+A autenticação sem senha para o usuário do `hadoop` que nós criamos anteriormente, **usuario_hadoop**, é na verdade uma
+**autenticação por chave pública**. Essa autenticação usa uma chave pública apresentada ao servidor como sua "senha".
+Por aí já sabemos que, conceitualmente, cada nó deve ter a chave pública de todos os nós participantes.
+
+### 2.1 - Habiltando a autenticação de Chave Pública no arquivo de configuração do servidor `sshd_config`
+Vamos ter que dizer ao servidor SSH que o mesmo deve aceitar a autenticação por Chave Pública, inclusive.
+Edite o arquivo **sshd_config**. No debian, ele está no diretório **/etc/ssh**:
+```bash
+# opcional - instale o editor VIM
+sudo apt-get install vim -y
+# agora abra o arquivo ssh_config para edição
+sudo vim /etc/ssh/sshd_config
+# por fim deixe esta linha como está abaixo:
+Set PubkeyAuthentication to Yes
+# salve o arquivo.
+# carregue as novas configurações no servidor ssh
+sudo /etc/init.d/ssh reload
+```
+
