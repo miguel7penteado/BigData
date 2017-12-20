@@ -32,3 +32,7 @@ Neste modo Hadoop também roda em um único nó. A diferença é que cada Hadoop
 ## Modo Distribuido
 
 No modo distribuido, cada processo-chave roda em nós distintos, criando ai sim, um cluster. Esta configuração possibilita a computação distribuida e permite confiabilidade, escalabilidade e tolerança a falhas. Este é o modo de operação padrão em ambientes DEV, QA, UAT, PREPROD e Produção.
+
+Neste modo os nós se comunicam por SSH, utilizando uma `autenticação por Chave Pública`, isto é, uma autenticação SSH sem senha.
+
+
