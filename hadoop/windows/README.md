@@ -12,5 +12,7 @@ do uso de um ambiente "linux" para windows instalando o CygWin por exemplo.
 Uma vez que temos um SSH server rodando em Windows, as coisas se simplificam bastante.
 
 ### 1.2 JAVA (JRE)
-O windows precisa instalar o framework JAVA para poder rodar o Hadoop. Também é necessário que o sistema operacional consiga executar o java a partir da linha de comando, sendo necessário a criaçãodefinição das `VARIÁVEIS DE AMBIENTE`, tanto as padrões do JAVA, quanto as do HADOOP.
+O windows precisa instalar o framework `JAVA` para poder rodar o `Hadoop`. No momento em que este tutorial foi escrito, estava trabalhando com o **HADOOP** versão 2.7.5 e usava o **JAVA** versão **8**. Também é necessário que o sistema operacional consiga executar o java a partir da linha de comando, sendo necessário a criaçãodefinição das `VARIÁVEIS DE AMBIENTE`, tanto as padrões do `JAVA`, quanto as do `HADOOP`.
+
+
 
