@@ -17,9 +17,9 @@ O `Gerenciador de Recursos` é responsável por inventariar recursos disponívei
 O componente `escalonador de recursos` do `Gerenciador de Recursos` do YARN aloca *recursos* para rodar Aplicações (jobs). Ele é um "escalonador puro" no fato de que ele não monitora ou segue o status do job ou seu progresso. E como ele não as monitora, ele não pode garantir que o job reinicie caso ele falhe.
 
 Na versão Hadoop 2.7.2, YARN suporta *politicas de escalonamento* : 
-*. O CapacityScheduler, 
-*. O FairScheduler, 
-*. O FIFO (first in first out) Scheduler. 
+>>> O CapacityScheduler, 
+>>> O FairScheduler, 
+>>> O FIFO (first in first out) Scheduler. 
 O escalonador padrão varia nas distribuições Hadoop, mas não importa a política usada, o escalonador aloca recursos associando containers (conjunto de recursos físicos) à requisição do `Arbitro de Aplicação` ou ApplicationMaster.
 
 ## Ciclo de Vida
