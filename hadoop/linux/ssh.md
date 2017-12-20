@@ -5,7 +5,7 @@ se chama **usuario_hadoop**, é possível faze-lo autenticar sem senha nos nós 
 chave pública**, que o servidor **OpenSSH** suporta.
 
 ## 1. Instalando o servidor SSH em sua distribuição.
-Não quero me limitar a uma distribuição específica, mas vou exemplificar a mais simples e genérica de todas, atualmente, que é o Linux Debian versão stretch (ou Linux Devuan versão ascii).
+Não quero me limitar a uma distribuição específica, mas vou exemplificar a mais simples e genérica de todas, atualmente, que é o Linux **Debian** versão stretch (ou Linux **Devuan** versão ascii).
 
 ### 1.1 Instalando o servidor SSH - Debian
 ```bash
