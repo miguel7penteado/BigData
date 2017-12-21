@@ -22,11 +22,15 @@ Na versão Hadoop 2.7.2, YARN suporta *politicas de escalonamento* :
 >>> * 3. O FIFO (first in first out) Scheduler. 
 O escalonador padrão varia nas distribuições Hadoop, mas não importa a política usada, o escalonador aloca recursos associando containers (conjunto de recursos físicos) à requisição do `Arbitro de Aplicação` ou ApplicationMaster.
 
-## 2 Arbitro de Aplicação ApplicationMaster
+## 2 Arbitro de Aplicação ou ApplicationMaster
 
 Cada job rodando no HADOOP tem sua própria instância de `Arbitro de Aplicação` ou **ApplicationMaster**. Esta instância "vive" em seu próprio container separado em um dos nós do cluster. Os ApplicationMaster de cada job mandam periodicamente mensagens "Batida-de-Coração" ao **Gerenciador de Recursos** ou ResourceManager, bem como requisitam recursos adicionais se necessário. Recursos adicionais são garantidos pelo ResourceManager através de arrendamentos do Container de Recursos, que servem como reservas para os containers nos **Gerenciadores de Nós** ou NodeManager.
 
 The ApplicationMaster oversees the execution of an application over its full lifespan, from requesting additional containers from the ResourceManger, to submitting container release requests to the NodeManager.
+
+## 3 Gerenciadores de Nós ou NodeManagers
+
+O `Gerenciador de Nós` ou **NodeManager** é um agente que está presente em cada nó. Sua missão é cuidar dos containers de recursos durante seu ciclo de vida, ou seja, monitorar uso de recursos do container e monitorar a periodicidade de comunicação com o `Gerenciador de Recursos` ou **ResourceManager**. Conceitualmente, o `Gerenciador de Nós` ou **NodeManager** é muito mais parecido com um Rastreador de Tarefas nas primeiras versões do HADOOP. 
 
 
 ## Ciclo de Vida
