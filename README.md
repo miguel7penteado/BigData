@@ -22,4 +22,6 @@ Tutorial sobre ferramentas BigData padrão (apache) - sem comercial
 * - Hive
 * - Sqoop
 * - Flume
+* - ZooKeeper
+
 
