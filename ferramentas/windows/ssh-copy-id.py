@@ -1,4 +1,4 @@
-"""ssh-copy-id for Windows.
+"""ssh-copy-id para Windows.
 
 Exemplo de uso: python ssh-copy-id.py fulano@maquinaremota
 
@@ -19,11 +19,11 @@ def winToPosix(parametro_caminho_windows):
 	caminho_posix = parametro_caminho_windows.replace('\\', '/')
 	return "/" + caminho_posix.replace(':', '', 1)
 
-parser = argparse.ArgumentParser()
-parser.add_argument("-i", "--identity_file", help="identity file, default to ~\\.ssh\\idrsa.pub", default=os.environ['HOME']+"\\.ssh\\id_rsa.pub")
-parser.add_argument("-d", "--dry", help="run in the dry run mode and display the running commands.", action="store_true")
-parser.add_argument("remote", metavar="user@machine")
-argumentos_comando_original = parser.parse_args()
+analizar_texto = argparse.ArgumentParser()
+analizar_texto.add_argument("-i", "--identity_file", help="identity file, default to ~\\.ssh\\idrsa.pub", default=os.environ['HOME']+"\\.ssh\\id_rsa.pub")
+analizar_texto.add_argument("-d", "--dry", help="run in the dry run mode and display the running commands.", action="store_true")
+analizar_texto.add_argument("remote", metavar="user@machine")
+argumentos_comando_original = analizar_texto.parse_args()
 
 chave_publica_local = winToPosix(argumentos_comando_original.identity_file)
 chave_publica_remota = "~/temp_id_rsa.pub"
