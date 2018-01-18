@@ -24,8 +24,13 @@ sua variáves de ambiente PATH. Com isto, para você rodar o comando você so te
 
 Fazendo isso para a sessão atual:
 
+```cmd
 set PATHEXT=%PATHEXT%;.PY
+```
 
 Fazendo isso ficar permanente ( Windows Vista em diante):
 
+```cmd
 setx PATHEXT %PATHEXT%;.PY
+```
+
