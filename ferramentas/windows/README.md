@@ -34,3 +34,18 @@ Fazendo isso ficar permanente ( Windows Vista em diante):
 setx PATHEXT %PATHEXT%;.PY
 ```
 
+# Instalação do JAVA puro ( sem instalador ):
+
+## 1. Descompacte o Java
+## 2. Defina a variável JAVA_HOME
+## 3. Descompacte os arquivos compactados
+
+```cmd
+cd %JAVA_HOME%
+
+for /R %f in (.\*.pack) do @"%cd%\bin\unpack200" -r -v -l "" "%f" "%~pf%~nf.jar"
+```
+
+
+
+
