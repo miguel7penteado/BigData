@@ -1,6 +1,6 @@
 # Google Cloud SDK
 
-
+Processo de instalação do SDK do google Cloud a partir do Linux Debian ou Linux Devuan (versão 9 do debian ou versão ascii do devuan) para acessar a Google Cloud via linha de comando.
 
 ```bash
 
