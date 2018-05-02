@@ -24,3 +24,8 @@ google-cloud-sdk-bigtable-emulator  \
 google-cloud-sdk-datastore-emulator \
 kubectl
 ```
+
+Inicializando
+```bash
+gcloud init
+```
