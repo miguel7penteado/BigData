@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 Introdução | Lembretes de Big Data - Departamento de Pesquisas Avançadas - DFPA - IBGE</title>
+  <meta name="description" content="Estas são notas de experimentação de processamento de DataSets BIG DATA no IBGE, Unidade Estadual de São Paulo pelo analista Miguel Suez Xve Penteado" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 Introdução | Lembretes de Big Data - Departamento de Pesquisas Avançadas - DFPA - IBGE" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Estas são notas de experimentação de processamento de DataSets BIG DATA no IBGE, Unidade Estadual de São Paulo pelo analista Miguel Suez Xve Penteado" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 Introdução | Lembretes de Big Data - Departamento de Pesquisas Avançadas - DFPA - IBGE" />
+  
+  <meta name="twitter:description" content="Estas são notas de experimentação de processamento de DataSets BIG DATA no IBGE, Unidade Estadual de São Paulo pelo analista Miguel Suez Xve Penteado" />
+  
+
+<meta name="author" content="Miguel Suez Xve Penteado" />
+
+
+<meta name="date" content="2020-06-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="hadoop-1.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Um resumo sobre BigData Prático</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> - Apresentação</a></li>
+<li class="chapter" data-level="2" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>2</b> Introdução</a><ul>
+<li class="chapter" data-level="2.1" data-path="introducao.html"><a href="introducao.html#arquitetura-do-cluster"><i class="fa fa-check"></i><b>2.1</b> Arquitetura do Cluster</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introducao.html"><a href="introducao.html#hadoop"><i class="fa fa-check"></i><b>2.1.1</b> Hadoop</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introducao.html"><a href="introducao.html#spark"><i class="fa fa-check"></i><b>2.1.2</b> Spark</a></li>
+<li class="chapter" data-level="2.1.3" data-path="introducao.html"><a href="introducao.html#hive"><i class="fa fa-check"></i><b>2.1.3</b> Hive</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="hadoop-1.html"><a href="hadoop-1.html"><i class="fa fa-check"></i><b>3</b> Hadoop</a><ul>
+<li class="chapter" data-level="3.1" data-path="hadoop-1.html"><a href="hadoop-1.html#serviços-de-armazenamento-hdfs"><i class="fa fa-check"></i><b>3.1</b> Serviços de Armazenamento HDFS:</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="hadoop-1.html"><a href="hadoop-1.html#serviço-de-nomeação-em-nó-hdfs-ou-namenodes"><i class="fa fa-check"></i><b>3.1.1</b> ‘serviço de nomeação’ em nó HDFS ou ‘namenodes’:</a></li>
+<li class="chapter" data-level="3.1.2" data-path="hadoop-1.html"><a href="hadoop-1.html#serviço-de-armazenamento-em-nó-hdfs-ou-datanodes"><i class="fa fa-check"></i><b>3.1.2</b> ‘serviço de armazenamento’ em nó HDFS ou ‘datanodes’:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="hadoop-1.html"><a href="hadoop-1.html#serviço-de-processamento-e-gerência-de-recursos-yarn"><i class="fa fa-check"></i><b>3.2</b> Serviço de Processamento e Gerência de Recursos YARN:</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a></li>
+<li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
+<li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
+<li class="chapter" data-level="5.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>5.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>6</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Lembretes de Big Data - Departamento de Pesquisas Avançadas - DFPA - IBGE</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducao" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> Introdução</h1>
+<p>O cluster é formado por três aplicações JAVA:</p>
+<div id="arquitetura-do-cluster" class="section level2">
+<h2><span class="header-section-number">2.1</span> Arquitetura do Cluster</h2>
+<ul>
+<li><a href="hadoop-1.html#hadoop-1">Hadoop</a> - Armazenamento e Processamento</li>
+<li><a href="introducao.html#spark">Spark</a> - Processamento</li>
+<li><a href="introducao.html#hive">Hive</a> - Organização de Armazenamento</li>
+</ul>
+<div id="hadoop" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Hadoop</h3>
+<p>Neste cluster tem funções de prover estrutura de armazenamento e processamento para sí mesmo, para o <em>Spark</em> e para o <em>Hive</em>.</p>
+</div>
+<div id="spark" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Spark</h3>
+<p>Tem função de <em>processamento</em> utilizando multiplas linguagens:</p>
+<ul>
+<li>Scala</li>
+<li>R</li>
+<li>Python
+Utiliza-se do armazenamento fornecido pelo <em>hadoop</em> para obter dados.</li>
+</ul>
+</div>
+<div id="hive" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Hive</h3>
+<p>Tem a função neste cluster de <em>organizar</em> os dados armazenados no <em>Hadoop</em> de forma semelhante a tabelas de bancos de Dados Relacionais.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hadoop-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["BigData.pdf", "BigData.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

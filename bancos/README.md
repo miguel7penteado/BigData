@@ -1,2 +1,0 @@
-# Bancos
-## Introdução
