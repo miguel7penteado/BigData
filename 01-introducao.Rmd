@@ -1,0 +1,24 @@
+# Introdução {#introducao}
+
+O cluster é formado por três aplicações JAVA:
+
+## Arquitetura do Cluster
+
+* [Hadoop] - Armazenamento e Processamento
+* [Spark] - Processamento
+* [Hive] - Organização de Armazenamento
+
+### Hadoop
+Neste cluster tem funções de prover estrutura de armazenamento e processamento para sí mesmo, para o *Spark* e para o *Hive*.
+
+### Spark
+Tem função de *processamento* utilizando multiplas linguagens:
+
+* Scala
+* R
+* Python
+Utiliza-se do armazenamento fornecido pelo *hadoop* para obter dados.
+
+### Hive
+Tem a função neste cluster de *organizar* os dados armazenados no *Hadoop* de forma semelhante a tabelas de bancos de Dados Relacionais.
+
