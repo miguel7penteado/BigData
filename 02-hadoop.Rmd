@@ -1,0 +1,31 @@
+# Hadoop
+
+Composto de 2 componentes principais, o componente de armazenamento de 
+informações 'HDFS' (Hadoop Distributed File Sistem) e o componente de 
+processamento e gerencia de recursos 'YARN' (Yet Another Resource Negotiator)
+
+## Serviços de Armazenamento HDFS:
+Para o sistema de arquivos distribuidos HDFS possa subir em um conjunto
+de máquinas (cluster), é necessário um serviço de nós de momeação e 
+um serviço de nós de armazenamento.
+
+### 'serviço de nomeação' em nó HDFS ou 'namenodes':
+Esse serviço é responsável por informar aos nós a estrutura interligada
+de máquinas (nós) que armazena os arquivos distribuidos.
+*Existem pelo menos 2 nós rodando estes serviços no cluster*, sendo um
+o principal (mestre) e o outro o backup (escravo).
+
+### 'serviço de armazenamento' em nó HDFS ou 'datanodes':
+Esse serviço é responsável por armazenar os arquivos através das máquinas
+(nós) pertencentes ao cluster. Sempre que possível, este serviço deve 
+estar rodando nos nós, ocupando espaço em disco da máquina hospedeira 
+(nó) e compartilhando com o cluster.
+
+## Serviço de Processamento e Gerência de Recursos YARN:
+Este serviço vai fazer a máquina hospedeira (nó) fornecer recursos de 
+processador e memória ao cluster. Deve rodar em todos os nós que tiverem
+ capacidade de comporta-lo.
+
+
+
+

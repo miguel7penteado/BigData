@@ -1,0 +1,288 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="big-data">BIG DATA</h1>
+<h2 id="uma-aplica&#xE7;&#xE3;o-pr&#xE1;tica-de-big-data-tomando-como-exemplo-os-microdados">Uma aplica&#xE7;&#xE3;o pr&#xE1;tica de BIG DATA tomando como exemplo os microdados</h2>
+<h2 id="do-censo-2010-do-ibge">do CENSO 2010 do IBGE</h2>
+<p><a href="https://www.linkedin.com/in/miguel-penteado-760486a9/" target="_blank"><img src="https://i.stack.imgur.com/gVE0j.png" alt="Linkedin"> LinkedIn</a>
+&#xA0;
+<a href="https://github.com/miguel7penteado" target="_blank"><img src="https://i.stack.imgur.com/tskMh.png" alt="GitHub"> GitHub</a></p>
+<h1 id="documenta&#xE7;&#xE3;o-do-projeto">Documenta&#xE7;&#xE3;o do projeto</h1>
+<p>Site est&#xE1; em <a href="http://miguel7penteado.github.io/BigData" target="_blank">!http://miguel7penteado.github.io/BigData</a></p>
+<h2 id="criando-documenta&#xE7;&#xE3;o">Criando Documenta&#xE7;&#xE3;o</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># Clone o reposit&#xF3;rio remoto</span>
+git <span class="hljs-built_in">clone</span> &lt;endere&#xE7;o_repositorio_github&gt;
+
+<span class="hljs-comment"># Adicione o ramo de p&#xE1;ginas do projeto</span>
+<span class="hljs-comment"># no github o nome padr&#xE3;o &#xE9; gh-pages</span>
+git checkout --orphan gh-pages
+
+<span class="hljs-comment"># apague a c&#xF3;pia dos arquivos que existe nesse ramo (rascunho)</span>
+git rm -rf .
+
+<span class="hljs-comment"># apague o arquivo de ignora&#xE7;&#xF5;es</span>
+rm <span class="hljs-string">&apos;.gitignore&apos;</span>
+
+<span class="hljs-comment"># Crie seus arquivos</span>
+gitbook init
+
+<span class="hljs-comment"># edite os modelos</span>
+
+<span class="hljs-comment"># Gere a estrutura html</span>
+gitbook install &amp;&amp; gitbook build
+
+<span class="hljs-comment"># Apagando tempor&#xE1;rios</span>
+git clean -fx node_modules
+git clean -fx _book
+
+<span class="hljs-comment"># adicione tudo que voc&#xEA; criou</span>
+git add -A
+
+<span class="hljs-comment"># D&#xEA; o nome para sua atualiza&#xE7;&#xE3;o</span>
+git commit <span class="hljs-_">-a</span> -m <span class="hljs-string">&quot;Publica&#xE7;&#xE3;o Inicial&quot;</span>
+
+<span class="hljs-comment"># Mande o ramo de volta para o reposit&#xF3;rio github</span>
+git push -u origin gh-pages
+
+<span class="hljs-comment"># volte para o tronco principal (ramo master)</span>
+git checkout master
+</code></pre>
+<h2 id="atualizando-a-documenta&#xE7;&#xE3;o">Atualizando a Documenta&#xE7;&#xE3;o</h2>
+<pre><code class="lang-bash"><span class="hljs-comment"># Clone o reposit&#xF3;rio remoto</span>
+git <span class="hljs-built_in">clone</span> &lt;endere&#xE7;o_repositorio_github&gt;
+
+<span class="hljs-comment"># entre no ramo gh-pages para atualizar a documenta&#xE7;&#xE3;o</span>
+git checkout gh-pages
+
+<span class="hljs-comment"># fa&#xE7;a suas atualiza&#xE7;&#xF5;es</span>
+
+<span class="hljs-comment"># Gere a estrutura html</span>
+gitbook install &amp;&amp; gitbook build
+
+<span class="hljs-comment"># Apagar arquivos tempor&#xE1;rios</span>
+git clean -fx node_modules
+git clean -fx _book
+
+<span class="hljs-comment"># adicione tudo que voc&#xEA; criou</span>
+git add -A
+
+<span class="hljs-comment"># D&#xEA; o nome para sua atualiza&#xE7;&#xE3;o</span>
+git commit <span class="hljs-_">-a</span> -m <span class="hljs-string">&quot;Publica&#xE7;&#xE3;o Inicial&quot;</span>
+
+<span class="hljs-comment"># Mande o ramo de volta para o reposit&#xF3;rio github</span>
+git push -u origin gh-pages
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2020-06-16T02:22:03.584Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-16T02:34:49.352Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
